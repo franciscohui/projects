@@ -1,0 +1,58 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*Side Notes*/
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: silver;
+	font-family: arial, sans-serif;
+	font-size: 1.2em;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+a:hover{
+	text-decoration: underline;
+}
+header{
+	display: block;
+}
+#content-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 2em 0 0 0;
+}
+#main, #sidebar{
+	display: inline-block;
+	width: 500px;
+	min-height: 5em;
+	margin: 0 2px; 
+	padding: 25px; 
+	transition: 0.3s;
+	border-radius: 6px;
+}
+#main:hover, #sidebar:hover{
+	background: rgba(184, 184, 184, .5);	
+	box-shadow: 0 0 10px gray;
+}
+#main:focus, #sidebar:focus{
+	outline: none;
+	background: rgba(184, 184, 184, .5);
+}
+footer{
+	position: fixed;
+	display: block;
+	width: 100%;
+	bottom: 10px;
+	margin: 25px 0 0 0;
+	font-size: .7em;
+	text-align: center;
+
+}
