@@ -1,16 +1,27 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/*Side Notes*/
+/*SIDE NOTES*/
+/*GLOBAL STYLES*/
+@media screen and (max-width: 480px){
+	html{
+		min-height: 850px;
+	}
+}
+
 html, body{
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body{
-	background: silver;
 	font-family: arial, sans-serif;
 	font-size: 1.2em;
+	background: gray;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
 }
 a{
 	text-decoration: none;
@@ -20,39 +31,43 @@ a{
 a:hover{
 	text-decoration: underline;
 }
-header{
-	display: block;
-}
-#content-wrapper{
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	margin: 2em 0 0 0;
-}
-#main, #sidebar{
-	display: inline-block;
-	width: 500px;
-	min-height: 5em;
-	margin: 0 2px; 
-	padding: 25px; 
-	transition: 0.3s;
-	border-radius: 6px;
-}
-#main:hover, #sidebar:hover{
-	background: rgba(184, 184, 184, .5);	
-	box-shadow: 0 0 10px gray;
-}
-#main:focus, #sidebar:focus{
-	outline: none;
-	background: rgba(184, 184, 184, .5);
-}
 footer{
 	position: fixed;
 	display: block;
+	left: 0;
 	width: 100%;
 	bottom: 10px;
 	margin: 25px 0 0 0;
 	font-size: .7em;
 	text-align: center;
-
 }
+
+/*TEXT MODULES*/
+#wrapper{
+	display: -webkit-flex; /*makes text modules flex*/
+	align-items: flex-start; /*makes items align to the top and not stretch*/
+	-webkit-flex-wrap: wrap; /*makes text modules wrap on smaller screens*/
+	justify-content: center; 
+	margin: 2em 0 0 0;
+}
+.module{
+	width: 320px;
+	min-width: 250px;
+	min-height: 250px;
+	background: white;
+	border: 1px solid silver;
+}
+.module header, .module article{
+	padding: 10px;
+}
+.module header{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.module header:focus, .module article:focus{
+	outline: none;
+}
+
+
+
+

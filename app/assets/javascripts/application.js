@@ -15,27 +15,88 @@
 //= require_tree .
 $(function() {
   
-  var main = document.getElementById('main');
+  var header1 = document.getElementById('header1');
   
-  $(main).blur(function() {
-    localStorage.setItem('mainData', this.innerHTML);
+  $(header1).blur(function() {
+    localStorage.setItem('header1Data', this.innerHTML);
   });
   
   // when the page loads
-  if ( localStorage.getItem('mainData') ) {
-    main.innerHTML = localStorage.getItem('mainData'); 
+  if ( localStorage.getItem('header1Data') ) {
+    header1.innerHTML = localStorage.getItem('header1Data'); 
   }
 
-  var sidebar = document.getElementById('sidebar');
+  var article1 = document.getElementById('article1');
   
-  $(sidebar).blur(function() {
-    localStorage.setItem('sidebarData', this.innerHTML);
+  $(article1).blur(function() {
+    localStorage.setItem('article1Data', this.innerHTML);
   });
   
   // when the page loads
-  if ( localStorage.getItem('sidebarData') ) {
-    sidebar.innerHTML = localStorage.getItem('sidebarData'); 
+  if ( localStorage.getItem('article1Data') ) {
+    article1.innerHTML = localStorage.getItem('article1Data'); 
   }
+
+// ---- module 2
+  var header2 = document.getElementById('header2');
+  
+  $(header2).blur(function() {
+    localStorage.setItem('header2Data', this.innerHTML);
+  });
+  
+  // when the page loads
+  if ( localStorage.getItem('header2Data') ) {
+    header2.innerHTML = localStorage.getItem('header2Data'); 
+  }
+
+  var article2 = document.getElementById('article2');
+  
+  $(article2).blur(function() {
+    localStorage.setItem('article2Data', this.innerHTML);
+  });
+  
+  // when the page loads
+  if ( localStorage.getItem('article2Data') ) {
+    article2.innerHTML = localStorage.getItem('article2Data'); 
+  }
+
+// ---- module 3
+  var header3 = document.getElementById('header3');
+  
+  $(header3).blur(function() {
+    localStorage.setItem('header3Data', this.innerHTML);
+  });
+  
+  // when the page loads
+  if ( localStorage.getItem('header3Data') ) {
+    header3.innerHTML = localStorage.getItem('header3Data'); 
+  }
+
+  var article3 = document.getElementById('article3');
+  
+  $(article3).blur(function() {
+    localStorage.setItem('article3Data', this.innerHTML);
+  });
+  
+  // when the page loads
+  if ( localStorage.getItem('article3Data') ) {
+    article3.innerHTML = localStorage.getItem('article3Data'); 
+  }
+
+
+
+
+
+
+
+// SORTABLE
+  $(function() {
+    $( ".sortable" ).sortable();
+    $( ".sortable" ).disableSelection();
+  });
+
+
+
   
   // to reset
   // localStorage.clear();
